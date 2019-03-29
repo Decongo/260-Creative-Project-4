@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Creative Project 3</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">When is better?</h1>
+    </header>
+
+    <div id="app">
+        <div class="display">
+            <div class="flex-table">
+                <div class="flex-column-day">
+                    <div class="card" @click="toggleDay(0)">
+                        <h2>Monday</h2>
+                    </div>
+                    <div v-for="time in days[0].times" class="card" @click="toggleSelected(time)"
+                        v-bind:class="{selected: time.isSelected}">
+                        <p>{{ time.hour }}:00</p>
+                    </div>
+                </div>
+                <div class="flex-column-day">
+                    <div class="card" @click="toggleDay(1)">
+                        <h2>Tuesday</h2>
+                    </div>
+                    <div v-for="time in days[1].times" class="card" @click="toggleSelected(time)"
+                        v-bind:class="{selected: time.isSelected}">
+                        <p>{{ time.hour }}:00</p>
+                    </div>
+                </div>
+                <div class="flex-column-day">
+                    <div class="card" @click="toggleDay(2)">
+                        <h2>Wednesday</h2>
+                    </div>
+                    <div v-for="time in days[2].times" class="card" @click="toggleSelected(time)"
+                        v-bind:class="{selected: time.isSelected}">
+                        <p>{{ time.hour }}:00</p>
+                    </div>
+                </div>
+                <div class="flex-column-day">
+                    <div class="card" @click="toggleDay(3)">
+                        <h2>Thursday</h2>
+                    </div>
+                    <div v-for="time in days[3].times" class="card" @click="toggleSelected(time)"
+                        v-bind:class="{selected: time.isSelected}">
+                        <p>{{ time.hour }}:00</p>
+                    </div>
+                </div>
+                <div class="flex-column-day">
+                    <div class="card" @click="toggleDay(4)">
+                        <h2>Friday</h2>
+                    </div>
+                    <div v-for="time in days[4].times" class="card" @click="toggleSelected(time)"
+                        v-bind:class="{selected: time.isSelected}">
+                        <p>{{ time.hour }}:00</p>
+                    </div>
+                </div>
+                <div class="flex-column-day">
+                    <div class="card" @click="toggleDay(5)">
+                        <h2>Saturday</h2>
+                    </div>
+                    <div v-for="time in days[5].times" class="card" @click="toggleSelected(time)"
+                        v-bind:class="{selected: time.isSelected}">
+                        <p>{{ time.hour }}:00</p>
+                    </div>
+                </div>
+                <div class="flex-column-day">
+                    <div class="card" @click="toggleDay(6)">
+                        <h2>Sunday</h2>
+                    </div>
+                    <div v-for="time in days[6].times" class="card" @click="toggleSelected(time)"
+                        v-bind:class="{selected: time.isSelected}">
+                        <p>{{ time.hour }}:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy;2019 &#x7c; <a href="https://github.com/Decongo/260-Creative-Project-3">Source</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.7/dist/vue.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>
